@@ -1,0 +1,22 @@
+	<script type="text/javascript">
+	$('#layouts-page').live('pageinit', function() {
+		$(function() {
+			$( "#progressbar" ).progressbar({
+				value: 85
+			});
+		});
+	});
+	</script>
+
+	<div id="progressbar"></div>
+	<br>
+
+	<form action="/quote2" method="post">
+			<h3>Name:</h3>
+		<input type="text" name="name" id="name" value="" placeholder="Bob Smith"/>
+		<h3>Company Name:</h3>
+		<input type="text" name="name" id="cname" value="" placeholder="Technocorp LTD"/>
+		<h3>Email:</h3>
+		<input type="text" name="name" id="ename" value="" placeholder="BobSmith@gmail.com"/>
+		<a data-role="button" href="/quote2">Submit</a>
+	</form>

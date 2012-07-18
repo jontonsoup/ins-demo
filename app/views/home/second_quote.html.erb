@@ -2,7 +2,7 @@
 	$('#layouts-page').live('pageinit', function() {
 		$(function() {
 			$( "#progressbar" ).progressbar({
-				value: 8
+				value: 20
 			});
 		});
 	});
@@ -10,8 +10,11 @@
 
 	<div id="progressbar"></div>
 	<br>
-	<h3>Please Enter the Zip-code of your Business Location:</h3>
+
 	<form action="/quote2" method="post">
+		<h3>Phone Number:</h3>
+		<input type="text" name="name" id="name" value="" placeholder="555-555-5555"/>
+		<h3>Please Enter the Zip-code of your Business Location:</h3>
 		<input type="text" name="name" id="name" value="" placeholder="12345"/>
 		<h3>Choose The Policies That You Would Like To Be Quoted For:</h3>
 		<fieldset data-role="controlgroup">
@@ -28,5 +31,5 @@
 			<input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" />
 			<label for="checkbox-6">Professional Liability / Errors and Omissions</label>
 		</fieldset>
-		<input type="submit" name="name" id="name" value="Submit" />
+		<a data-role="button" href="/quote2">Submit</a>
 	</form>

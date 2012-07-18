@@ -2,8 +2,12 @@ Insureon::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-     match '/quote' => 'home#second_quote'
-      match '/quote2' => 'home#buisness_type'
+  match '/quote' => 'home#second_quote'
+  match '/quote2' => 'home#buisness_type'
+  match '/quote3' => 'home#number_of_employees'
+  match '/quote4' => 'home#annual_sales'
+   match '/quote5' => 'home#personal_info'
+  match '/products' => 'home#products'
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
