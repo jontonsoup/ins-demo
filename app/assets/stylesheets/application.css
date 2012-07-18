@@ -10,4 +10,16 @@
  *
  *= require_self
  *= require_tree .
-*/
+ */
+
+
+ .center-button{
+ 	margin: 0 auto;
+ }
+
+ .center-wrapper{
+ 	text-align: center;
+ }
+ .center-wrapper * {
+ 	margin: 0 auto;
+ }
