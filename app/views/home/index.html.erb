@@ -4,8 +4,35 @@
 	</div>
 	<br>
 	<br>
-	<ul data-role="listview" >
-		<li><a href="http://www.techinsurance.com/products/">Products</a></li>
-		<li><a href="http://www.techinsurance.com/press-releases/">Press</a></li>
-		<li><a href="http://www.techinsurance.com/sample-quotes/">Sample Quotes</a></li>
-	</ul>
+	<div data-role="popup" id="popupBasic" data-transition="slidedown" class="ui-content">
+		<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+		<form action="" method="post">
+			Phone:
+			<input type="text" name="name" id="name" value="" placeholder="555-555-5555"/>
+			When Can We Call You?
+			<select name="select-choice-0" id="select-choice-0">
+				<option value="standard">Now</option>
+				<option value="rush">Morning(8am-12pm)</option>
+				<option value="express">Afternoon(12pm-6pm)</option>
+				<option value="overnight">Night(6pm-9pm)</option>
+			</select>
+			<input type="submit" name="name" id="name" value="Submit" />
+		</form>
+	</div>
+	<div data-role="popup" id="popupBasic1" data-transition="slidedown" class="ui-content">
+		<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+		<form action="/quote" method="post">
+			<select name="select-choice-0" id="select-choice-0">
+				<option value="standard">Computer, Web, IT Industries</option>
+				<option value="rush">All Other</option>
+			</select>
+			<input type="submit" name="name" id="name" value="Submit" />
+		</div>
+
+		<ul data-role="listview">
+			<li data-theme="a"><a data-theme="a" href="#popupBasic1" data-rel="popup">Get A Quote Now!</a></li>
+			<li><a href="#popupBasic" data-rel="popup">Have an Insureon Agent Call You</a></li>
+			<li><a href="http://www.techinsurance.com/products/">Products</a></li>
+			<li><a href="http://www.techinsurance.com/press-releases/">Press</a></li>
+			<li><a href="http://www.techinsurance.com/sample-quotes/">Sample Quotes</a></li>
+		</ul>
