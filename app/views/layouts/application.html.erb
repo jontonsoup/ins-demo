@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Insureon</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>Insureon</title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<link href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  	<script type="text/javascript" src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 </head>
 <body>
+	<div data-role="page" id="layouts-page">
+		<div data-role="header" data-position="fixed">
+			<%= render 'layouts/header' %>
+		</div>
+		<div data-role="content">
+			<% if flash[:notice] %>
+			<div data-role="navbar">
+				<ul>
+					<li>
+						<a href="" ><%= flash[:notice] %></a>
+					</li>
+				</ul>
+			</div>
+			<% end %>
+			<% if flash[:error] %>
+			<div data-role="navbar">
+				<ul>
+					<li>
+						<a href="" ><%= flash[:error] %></a>
+					</li>
+				</ul>
+			</div>
+			<% end %>
+			<%= yield %>
+		</div>
+		<div data-role="footer" id="layouts-footer" class="ui-bar" data-type="horizontal">
 
-<%= yield %>
+		</div>
+	</div>
 
 </body>
 </html>
